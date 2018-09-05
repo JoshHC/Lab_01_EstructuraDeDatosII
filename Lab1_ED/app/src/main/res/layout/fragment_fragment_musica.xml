@@ -43,7 +43,8 @@ tools:context=".MainActivity">
         android:id="@+id/ListaParaMostrar"
         android:layout_width="match_parent"
         android:layout_height="573dp"
-        android:background="#1eaaaaaa" />
+        android:background="#1eaaaaaa"
+        />
 
 </LinearLayout>
 
