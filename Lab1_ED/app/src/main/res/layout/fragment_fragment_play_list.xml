@@ -84,7 +84,7 @@
                 android:layout_alignParentBottom="true"
                 android:text="Duracion"
                 android:textColor="@android:color/background_light"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
         </RelativeLayout>
 
