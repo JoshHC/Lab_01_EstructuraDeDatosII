@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/BackgroundLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondose"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="365dp"
+        android:layout_height="645dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:background="#1eaaaaaa"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView">
+
+        <ListView
+            android:id="@+id/PlayListView"
+            android:layout_width="match_parent"
+            android:layout_height="578dp"
+            android:background="#1eaaaaaa" />
+
+        <RelativeLayout
+            android:id="@+id/Contenedor"
+            android:layout_width="365dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <Button
+                android:id="@+id/btnOrdenar"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="106dp"
+                android:layout_height="66dp"
+                android:text="Ordenar"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/sw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="116dp"
+                android:text="Ascendente"
+                android:textColor="@android:color/background_light"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <RadioButton
+                android:id="@+id/rbtnNombre"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="11dp"
+                android:text="Nombre"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rbtnDuracion"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/rbtnNombre"
+                android:layout_alignParentBottom="true"
+                android:text="Duracion"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

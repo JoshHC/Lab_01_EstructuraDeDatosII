@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/BackgroundLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/fondose"
+android:orientation="vertical"
+tools:context=".MainActivity">
+
+<SearchView
+    android:id="@+id/searchView"
+    android:layout_width="373dp"
+    android:layout_height="57dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginStart="8dp"
+    android:background="#3caaaaaa"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.47"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="371dp"
+    android:layout_height="596dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="5dp"
+    android:background="#1eaaaaaa"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.483"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/searchView">
+
+    <ListView
+        android:id="@+id/ListaParaMostrar"
+        android:layout_width="match_parent"
+        android:layout_height="573dp"
+        android:background="#1eaaaaaa" />
+
+</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
