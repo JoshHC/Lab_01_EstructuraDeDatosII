@@ -18,10 +18,12 @@ public class CancionAdapter extends BaseAdapter implements Filterable {
     protected ArrayList<Cancion> items;
     protected ArrayList<Cancion> orig;
 
+
     public CancionAdapter(Activity activity, ArrayList<Cancion> items) {
         this.activity = activity;
         this.items = items;
     }
+
 
 
     public void clear() {

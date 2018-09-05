@@ -7,6 +7,8 @@ public class Cancion {
     public String Artista = "";
     public Double Duracion = 0.0;
 
+
+
     //Se inicializa el constructor
     public Cancion(String nombre, String artista, Double duracion){
 
