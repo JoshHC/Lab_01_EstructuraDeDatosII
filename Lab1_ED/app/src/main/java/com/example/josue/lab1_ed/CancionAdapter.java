@@ -25,7 +25,6 @@ public class CancionAdapter extends BaseAdapter implements Filterable {
     }
 
 
-
     public void clear() {
         items.clear();
     }

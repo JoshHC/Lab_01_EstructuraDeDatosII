@@ -22,7 +22,6 @@ import java.util.List;
 
 public class FragmentMusica extends Fragment {
 
-
     //Declaracion del Diccionario de Uso Global
     Biblioteca ObjBiblioteca = new Biblioteca();
     //Se crea la Lista que recibira las canciones en formato string para mostrarlas en el ListText
