@@ -25,8 +25,11 @@ public class FragmentPlayList extends Fragment {
     ArrayList<Cancion> Rockola = ObjBiblioteca.DevolucionDeObjetosPlayList();
     //Se crea la ListView a Usar
     ListView Lista;
+    //Se crea el boton Ordenar al cual se le asignara el boton del layout
     Button Ordenar;
+    //Se crea el Switch Ordenar al cual se le asignara el Switch del layout
     Switch Sw;
+    //Se crean los RadioButton a los cuales se les asignara los RadioButton del layout
     RadioButton btnNombre;
     RadioButton btnDuracion;
 
@@ -42,10 +45,14 @@ public class FragmentPlayList extends Fragment {
         Lista.setAdapter(Adaptador);
         //Lo Habilitamos para Filtrar
         Lista.setTextFilterEnabled(true);
+        //se asigna el boton
         Ordenar = view.findViewById(R.id.btnOrdenar);
+        //se asigna el switch
         Sw = view.findViewById(R.id.sw);
+        //se asignan los botones
         btnNombre = view.findViewById(R.id.rbtnNombre);
         btnDuracion = view.findViewById(R.id.rbtnDuracion);
+        //Funcion de ordenamiento
         Ordenar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

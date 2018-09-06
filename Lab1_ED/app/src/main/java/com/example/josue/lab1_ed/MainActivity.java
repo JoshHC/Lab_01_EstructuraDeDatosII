@@ -15,16 +15,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Se Fija el Layout a Editar
         setContentView(R.layout.activity_main);
+        //Se Crea un Objeto Toolbar al cual se le asignara la toolbar del layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //Se coloca el icono a la toolbar
         getSupportActionBar().setIcon(R.drawable.pera2);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        //se llama el menu principal
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -75,8 +77,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        //Se crea un FragmentManager para poder administrar los Fragments y cambiar entre ellos al acceder a la barra
         FragmentManager fragmentManager = getSupportFragmentManager();
 
+        //nav_gallery = Music
+        //nav_slideshow = PlayList
         if (id == R.id.nav_gallery) {
            fragmentManager.beginTransaction().replace(R.id.contenedor, new FragmentMusica()).commit();
         } else if (id == R.id.nav_slideshow) {

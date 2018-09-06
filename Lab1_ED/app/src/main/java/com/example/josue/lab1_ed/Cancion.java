@@ -17,6 +17,7 @@ public class Cancion {
         this.Duracion = duracion;
     }
 
+    //Se crean los metodos get y set para acceder y asignar valores a las variables.
     public String getNombre() {
         return Nombre;
     }

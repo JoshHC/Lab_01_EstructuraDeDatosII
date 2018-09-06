@@ -10,6 +10,7 @@ import java.util.TreeMap;
 public class Biblioteca {
     //Se crea un Diccionario de Canciones para posteriormente utilizarlo para la busqueda.
     public Map<String, Cancion> ListadeCanciones;
+    //Se crea un Diccionario Estatico para Almacenar las canciones que se agreguen a la PlayList
     static public Map<String, Cancion> PlayList = new TreeMap<String,Cancion>();
 
 
@@ -76,11 +77,13 @@ public class Biblioteca {
         }
         return Listado;
     }
+    //Metodo en donde se llena la PlayList
     public void llenarPlayList(Cancion NuevaCancion)
     {
         PlayList.put(NuevaCancion.Nombre.toString(), new Cancion(NuevaCancion.Nombre,NuevaCancion.Artista,NuevaCancion.Duracion));
     }
 
+    //Metodo para Ordenar las canciones por duracion
      public ArrayList<Cancion> OrdenarPorDuracion(String Orden)
      {
         ArrayList<Cancion> cancionporduracion = new ArrayList<Cancion>(PlayList.values());
@@ -98,6 +101,7 @@ public class Biblioteca {
          return cancionporduracion;
      }
 
+     //Metodo para ordenar las canciones por nombre
      public ArrayList<Cancion> OrdenarPorNombre(String Orden)
      {
          ArrayList<Cancion> cancionpornombre = new ArrayList<Cancion>(PlayList.values());
@@ -115,6 +119,7 @@ public class Biblioteca {
 
 }
 
+    //Comparador de nombres de la clase
     class ComparadorNombres implements Comparator<Cancion> {
     public int compare(Cancion a, Cancion b) {
         return a.getNombre().compareTo(b.getNombre());

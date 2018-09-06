@@ -14,11 +14,12 @@ import java.util.ArrayList;
 
 public class CancionAdapter extends BaseAdapter implements Filterable {
 
+    //Se crean objetos de tipo ArrayList y Activity
     protected Activity activity;
     protected ArrayList<Cancion> items;
     protected ArrayList<Cancion> orig;
 
-
+    //Se inicializa el constructor
     public CancionAdapter(Activity activity, ArrayList<Cancion> items) {
         this.activity = activity;
         this.items = items;
@@ -35,14 +36,13 @@ public class CancionAdapter extends BaseAdapter implements Filterable {
         }
     }
 
-
-
-
+    //Funcion para obtener el numero
     @Override
     public int getCount() {
         return items.size();
     }
 
+    //Funcion para obtener un elemento especifico o su id
     @Override
     public Object getItem(int position) {
         return null;
@@ -53,6 +53,7 @@ public class CancionAdapter extends BaseAdapter implements Filterable {
         return 0;
     }
 
+    //Filtro para la busqueda
     public Filter getFilter() {
         return new Filter(){
             @Override
@@ -88,6 +89,7 @@ public class CancionAdapter extends BaseAdapter implements Filterable {
         super.notifyDataSetChanged();
     }
 
+    //Se modifican los valores para mostrarlos correctamente en la view
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
