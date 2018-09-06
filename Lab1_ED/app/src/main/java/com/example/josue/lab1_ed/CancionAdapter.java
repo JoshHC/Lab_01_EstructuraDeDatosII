@@ -36,6 +36,8 @@ public class CancionAdapter extends BaseAdapter implements Filterable {
     }
 
 
+
+
     @Override
     public int getCount() {
         return items.size();
