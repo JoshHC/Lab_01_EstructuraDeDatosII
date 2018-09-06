@@ -87,7 +87,6 @@ public class FragmentPlayList extends Fragment {
                         Lista.setTextFilterEnabled(true);
                     }
                 }
-
             }
         });
        return view;
